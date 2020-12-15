@@ -65,7 +65,7 @@ We then used Matplotlib (or more accurately, the Pandas Plotting implementation 
 
 ![lowest percent diff](images/babiesvdoggos.png)
 
-As you can see, Mia is fairly popular in New York City as a name for either a baby or a dog. (If that's your name, please don't take it personnaly.)
+As you can see, Mia is fairly popular in New York City as a name for either a baby or a dog. (If that's your name, please don't take it personally.)
 
 Conversely, we thought we'd do a descending sort of percent difference to get the names that were least likely to be both a baby and a dog name:
 
