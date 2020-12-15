@@ -42,7 +42,7 @@ Some issues with this dataset were:
 
 [Source Data](https://data.cityofnewyork.us/Health/NYC-Dog-Licensing-Dataset/nu7n-tubp)
 
-Dogs have no constitutional right to privacy, so each dog gets its own row. (More accurately, each registration gets its own row, but if you only looka registrations for a single year, it ends up being the same thing.) There's quite a few columns, like the breed and zip code, that could both make for some interesting analyses of their own, but weren't relevant to our central thesis. But like the babies, we have name and birth year:
+Dogs have no constitutional right to privacy, so each dog gets its own row. (More accurately, each registration gets its own row, but if you only look at registrations for a single year, it ends up being the same thing.) There's quite a few columns like the breed and zip code that could both make for some interesting analyses of their own, but weren't relevant to our central thesis. As with the babies, we just needed the names, as well as birth year to obtain the right dogs:
 
 ![doggo aaliyahs](images/doggo-aaliyahs.png)
 
@@ -50,8 +50,8 @@ So we took registrations from the 2018 "extract year" and filtered for dogs born
 
 Some issues with this dataset were:
 
-- Many duplicates. However, this was mainly because it's actually several datasets ("extract years") combined into one, which was easy to filter out.
-- Plentiful entry errors. Some names were just numbers or dates, some were 1, 2 or 3 hyphens, some were datetimes.
+- Many duplicates. However, this was mainly because it's actually several datasets combined into one, which was easy to filter out since there was a column ("extractyear") that identified which dataset it was from.
+- Plentiful entry errors. Some names were just numbers or dates, some were 1 or more hyphens, some were datetimes.
 - Missing values in the JSON. Specifically, many objects returned were missing gender, which required some cleaning in the Extract phase.
 - Inconsistencies. Capitalization varied frequently between title and uppercase. Many names had multiple variations in punctuation, like "Peekaboo" and "Peek-a-Boo", so we used some RegEx to remove punctuation altogether.
 
